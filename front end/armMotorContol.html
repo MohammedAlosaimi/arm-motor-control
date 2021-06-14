@@ -11,6 +11,8 @@
     <head>
         <span id="language"><span id="ar">عربي</span>|<span id="en">English</span> </span>
     </head>
+
+    <!--The form to control the robot  arm-->
     <div class="container">
         <p>Arm Controller</p>
         <form action="" method="post">
@@ -62,6 +64,7 @@
         const motorsName = Array.from(document.getElementsByClassName("motor-num"));
         var l = "en";
 
+        //function to clean the text
         document.getElementById("reset").addEventListener("click", () => {
 
             output.forEach(o => {
@@ -69,6 +72,7 @@
             });
         });
         
+        //Add number next to the range silders
         motors.forEach(motor => {
             motor.addEventListener("input", i => {
                 console.log(i);
