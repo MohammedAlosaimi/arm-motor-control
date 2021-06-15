@@ -1,3 +1,65 @@
-.container {
-    background-color: antiquewhite;
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(192, 205, 206);
+}
+#container {
+    background-color: rgb(231, 237, 238);
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10%;
+}
+
+#lan {
+    background-color: #536966;
+    margin-bottom: 50px;
+}
+
+.language {
+    border: none;
+    background-color: #536966;
+    cursor: pointer;
+    padding: 15px;
+    color: white;
+}
+
+.language:hover {
+    background-color: #92b6b1;
+    color: black;
+}
+
+.motor {
+    margin-top: 5px;
+}
+
+.buttons{
+    margin-top: 10px;
+    
+    
+}
+
+.button {
+    width: 20%;
+    height: 25px;
+    background-color: #536966;
+    border: none;
+    color: white;
+    text-align: center;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.hidden {
+    color: #7f9794;
+}
+
+#reset {
+    position: relative;
+    left: 50%;
+}
+
+#title {
+    text-align: center;
+    font-size: 25px;
 }
