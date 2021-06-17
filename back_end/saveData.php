@@ -1,18 +1,6 @@
 <?php
 
-//database access data
-$servername = "localhost";
-$username = "user";
-$password = "XHMO4Ki@p!(lLoX/";
-$dbname = "arm_control";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+include_once "config.php";
 
 $motor = array($_POST["m1"], $_POST["m2"], $_POST["m3"], $_POST["m4"], $_POST["m5"], $_POST["m6"]);
 
