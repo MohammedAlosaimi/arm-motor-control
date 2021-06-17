@@ -2,7 +2,7 @@
 
 <!-- PROJECT IMAGE -->
 <p align="center">
-<img src="Images/image.png" alt="image" width="160">
+<img src="images/image.png" alt="image" width="160">
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -23,7 +23,7 @@ The aim of this project is to control a robotic arm remotely without the need fo
 ## Interface
 The interface is designed in a simple way for ease of use. It also met the main things (such as: the angle for the six motors, run button, save button, etc.) see figure 1.
 <p align="center">
-<img src="Images/interfaceE.png" alt="interface (English)" width="160">
+<img src="images/interfaceE.png" alt="interface (English)" width="160">
     <p align="center">
         figure 1: The interface for the english language.
     </p>
@@ -62,12 +62,12 @@ This section explains what each button does and explains the implementation of t
 - reset button: Used to reset the value to the main value (figure 2).
 - run/off button: Used to save the action in the database (figure 2,3).
 <p align="center">
-    <img src="Images/buttons.png" alt="buttons" width="160">
+    <img src="images/buttons.png" alt="buttons" width="160">
     <br/>
     figure 2: buttons
 </p>
 <p align="center">
-    <img src="Images/offButton.png" alt="off button" width="160">
+    <img src="images/offButton.png" alt="off button" width="160">
     <br/>
     figure 2: buttons
 </p>
