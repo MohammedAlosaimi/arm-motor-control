@@ -2,9 +2,15 @@ const motors = Array.from(document.getElementsByClassName("motor"));
 const output = Array.from(document.getElementsByClassName("motor-value"));
 const motorsName = Array.from(document.getElementsByClassName("motor-num"));
 const container = document.getElementById("container");
+const run = document.getElementById("run");
+const reset = document.getElementById("reset");
+const arabic = document.getElementById("arabic");
+const english = document.getElementById("english");
+const runValue = document.getElementById("run-value");
+
 
 //function to clean the text
-document.getElementById("reset").addEventListener("click", () => {
+reset.addEventListener("click", () => {
 
     output.forEach(o => {
         o.innerHTML = "90";
@@ -27,8 +33,8 @@ motors.forEach(motor => {
         
 
 //change language
-document.getElementById("arabic").addEventListener("click", arLanguage);
-document.getElementById("english").addEventListener("click", enLanguage);
+arabic.addEventListener("click", arLanguage);
+english.addEventListener("click", enLanguage);
 
 //for arabic language
 function arLanguage(){
@@ -40,16 +46,22 @@ function arLanguage(){
         mn.innerHTML = "محرك " + mn.dataset["motornum"];
     });
     document.getElementById("save").innerHTML = "حفظ";
-    document.getElementById("run").innerHTML = "تشغيل";
-    document.getElementById("reset").innerHTML = "إعادة تعيين";
+    if(runValue.value == 1){
+        run.innerHTML = "تشغيل";
+        run.value = 1;
+    } else{
+        run.innerHTML = "ايقاف";
+        run.value = 0;
+    }
+    reset.innerHTML = "إعادة تعيين";
 
     //change reset button positoin
-    document.getElementById("reset").style.left = null;
-    document.getElementById("reset").style.right = "50%";
+    reset.style.left = null;
+    reset.style.right = "50%";
 
     //hide the (Engilsh) on the top of the page
-    document.getElementById("arabic").classList.remove("hidden");
-    document.getElementById("english").classList.add('hidden');
+    arabic.classList.remove("hidden");
+    english.classList.add('hidden');
 }
 
 //for english language
@@ -62,14 +74,39 @@ function enLanguage(){
         mn.innerHTML = "motor " + mn.dataset["motornum"];
     });
     document.getElementById("save").innerHTML = "Save";
-    document.getElementById("run").innerHTML = "Run";
-    document.getElementById("reset").innerHTML = "Reset";
+    if(runValue.value == 1){
+        run.innerHTML = "Run";
+        run.value = 1;
+    } else{
+        run.innerHTML = "Off";
+        run.value = 0;
+    }
+    reset.innerHTML = "Reset";
 
     //change reset button positoin
-    document.getElementById("reset").style.left = "50%";
-    document.getElementById("reset").style.right = null;
+    reset.style.left = "50%";
+    reset.style.right = null;
 
     //hide the() on the top of the page
-    document.getElementById("english").classList.remove("hidden");
-    document.getElementById("arabic").classList.add('hidden');
+    english.classList.remove("hidden");
+    arabic.classList.add('hidden');
 }
+
+//Check whether the arm has already moved or not
+fetch("/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/back_end/runInfo.php").then(
+    function(response){
+        return response.json();
+    }
+).then(function (response){
+    onOrOff = parseInt(response);
+    if(onOrOff == 1){
+        runValue.value = 0;
+        run.innerHTML = "Off";
+    } else{
+        runValue.value = 1;
+        run.innerHTML = "Run";
+    }
+})
+.catch(err => {
+    console.error(err);
+});
