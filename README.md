@@ -23,7 +23,7 @@ The aim of this project is to control a robotic arm remotely without the need fo
 ## Interface
 The interface is designed in a simple way for ease of use. It also met the main things (such as: the angle for the six motors, run button, save button, etc.) see figure 1.
 <p align="center">
-<img src="images/interfaceE.png" alt="interface (English)" width="500">
+<img src="images/interfaceE.png" alt="interface (English)" width="700">
     <p align="center">
         figure 1: The interface for the english language.
     </p>
