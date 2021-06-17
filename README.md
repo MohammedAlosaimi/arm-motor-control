@@ -36,7 +36,7 @@ This project only needs to design two tables. One is to save angles (Table 1) an
 <p align="center"> Table 1: arm angle.
 </p>
 | Attribute |            Description              | Datatype | PK |
-|-----------|-------------------------------------|----------|----|
+| --------- | ----------------------------------- | -------- | -- |
 |    id     | this id used to determine which arm |  integer | yes|
 |   motor1  | the number of the angle for motor 1 |  integer | no |
 |   motor2  | the number of the angle for motor 2 |  integer | no |
