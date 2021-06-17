@@ -3,13 +3,8 @@ body {
     margin: 0;
     background-color: rgb(192, 205, 206);
 }
-#container {
-    background-color: rgb(231, 237, 238);
-    width: 300px;
-    padding: 10px;
-    margin: auto;
-    border-radius: 10%;
-}
+
+/* Language */
 
 #lan {
     background-color: #536966;
@@ -27,6 +22,25 @@ body {
 .language:hover {
     background-color: #92b6b1;
     color: black;
+}
+
+.hidden {
+    color: #7f9794;
+}
+
+/* Container */
+
+#container {
+    background-color: rgb(231, 237, 238);
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    border-radius: 10%;
+}
+
+#title {
+    text-align: center;
+    font-size: 25px;
 }
 
 .motor {
@@ -52,19 +66,14 @@ body {
     cursor: pointer;
 }
 
-.hidden {
-    color: #7f9794;
-}
+
 
 #reset {
     position: relative;
     left: 50%;
 }
 
-#title {
-    text-align: center;
-    font-size: 25px;
-}
+/* Range Silder*/
 
 .slider {
     -webkit-appearance: none;
