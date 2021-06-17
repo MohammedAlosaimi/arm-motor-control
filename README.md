@@ -35,6 +35,7 @@ This project only needs to design two tables. One is to save angles (Table 1) an
 <br/>
 <p align="center"> Table 1: arm angle.
 </p>
+
 | Attribute |            Description              | Datatype | PK |
 |:---------:|:-----------------------------------:|:--------:|:--:|
 |    id     | this id used to determine which arm |  integer | yes |
@@ -47,6 +48,7 @@ This project only needs to design two tables. One is to save angles (Table 1) an
 <br/>
 <p align="center"> Table 2: start/stop.
 </p>
+
 | Attribute |            Description              | Datatype | PK |
 |:---------:|:-----------------------------------:|:--------:|:--:|
 |    id     | this id used to determine which arm |  integer | yes |
