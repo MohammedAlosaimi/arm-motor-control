@@ -38,6 +38,3 @@ if($count == 1) {
         </script>';
     }
 }
-
-
-mysqli_close($conn);

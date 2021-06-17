@@ -23,7 +23,7 @@ while($row = mysqli_fetch_assoc($result)){
 $sql = "SELECT on_off FROM run WHERE id = 1";
 $result = mysqli_query($conn,$sql);
 $count = mysqli_num_rows($result);
-
+mysqli_close($conn);
 $v = 0;
 
 while($row = mysqli_fetch_assoc($result)){
@@ -31,5 +31,3 @@ while($row = mysqli_fetch_assoc($result)){
 }
 
 echo $arm_info;
-
-mysqli_close($conn);
