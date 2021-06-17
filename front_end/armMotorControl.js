@@ -9,6 +9,10 @@ document.getElementById("reset").addEventListener("click", () => {
     output.forEach(o => {
         o.innerHTML = "90";
     });
+
+    motors.forEach(motor => {
+        motor.value = 90;
+    });
 });
         
 //Add number next to the range silders

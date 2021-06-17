@@ -17,45 +17,49 @@
     <!--The form to control the robot  arm-->
     <div id="container">
         <p id="title">Arm Controller</p>
-        <form action="" method="post">
+        <form action="/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/back_end/saveData.php" method="POST">
             <div class="motor1">
                 <span class="motor-num" data-motornum="1">motor 1</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="1">
+                <input id="m1" name="m1" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="1">
                 <span class="motor-value" data-motornum="1">90</span>
             </div>
             <div class="motor2">
                 <span class="motor-num" data-motornum="2">motor 2</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="2">
+                <input id="m2" name="m2" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="2">
                 <span class="motor-value" data-motornum="2">90</span>
             </div>
             <div class="motor3">
                 <span class="motor-num" data-motornum="3">motor 3</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="3">
+                <input id="m3" name="m3" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="3">
                 <span class="motor-value" data-motornum="3">90</span>
             </div>
             <div class="motor4">
                 <span class="motor-num" data-motornum="4">motor 4</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="4">
+                <input id="m4" name="m4" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="4">
                 <span class="motor-value" data-motornum="4">90</span>
             </div>
             <div class="motor5">
                 <span class="motor-num" data-motornum="5">motor 5</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="5">
+                <input id="m5" name="m5" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="5">
                 <span class="motor-value" data-motornum="5">90</span>
             </div>
             <div class="motor6">
                 <span class="motor-num" data-motornum="6">motor 6</span>
-                <input type="range" min="0" max="180" value="90" class="motor slider" data-motornum="6">
+                <input id="m6" name="m6" type="range" min="0" max="180" value="90" class="motor slider" data-motornum="6">
                 <span class="motor-value" data-motornum="6">90</span>
             </div>
             <div class="save-data buttons">
-                <button id="save" class="button">Save</button>
+                <button type="submit" id="save" class="button">Save</button>
             </div>
+        </form>
+        <form action="/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/back_end/run.php" method="post">
             <div class="run-arm buttons">
-                <button id="run" class="button">Run</button>
+                <input type="hidden" id="run-value" name="run-value" value="true">
+                <button type="submit" id="run" class="button">Run</button>
                 <button type="reset" id="reset" class="button">Reset</button>
             </div>
         </form>
+       
     </div>
 
     <script src="armMotorControl.js"></script>
