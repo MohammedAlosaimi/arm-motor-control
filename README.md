@@ -71,7 +71,7 @@ This section explains what each button does and explains the implementation of t
 <p align="center">
     <img src="images/offButton.png" alt="off button" width="160">
     <br/>
-    figure 2: buttons
+    figure 2: off button
 </p>
 
 <!-- FILES -->
