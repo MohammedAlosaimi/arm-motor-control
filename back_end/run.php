@@ -17,7 +17,7 @@ if($count == 1) {
     $sql = "UPDATE run SET on_off='$runvalue' WHERE id=1";
 
     if (mysqli_query($conn, $sql)) {
-        echo '<script>alert("Record updated successfully");
+        echo '<script>alert("Record updated successfully (Run = ' . $runvalue .')");
         window.location.href="/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/front_end/armMotorControl.html";
         </script>';
     } else {
@@ -29,11 +29,11 @@ if($count == 1) {
     $sql = "INSERT INTO run(on_off) VALUES ('$runvalue')";
 
     if(mysqli_query($conn, $sql)){
-        echo '<script>alert("Data has been successfully insert into the record");
+        echo '<script>alert("Data has been successfully insert into the record (Run = ' . $runvalue .')");
         window.location.href="/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/front_end/armMotorControl.html";
         </script>';
     } else {
-        echo '<script>alert("Invalid login info");
+        echo '<script>alert("Error inserting record: '. mysqli_error($conn) . '");
         window.location.href="/PHPinVisualStudioCode/arm-motor-control/arm-motor-control/front_end/armMotorControl.html";
         </script>';
     }
